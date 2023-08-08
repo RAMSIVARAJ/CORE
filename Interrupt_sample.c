@@ -7,9 +7,9 @@ void wait(int);
 
 void main()
 {
- IT0=1;
- IE0=0;
- EX0=1;
+ IT1=1;
+ IE1=0;
+ EX1=1;
  EA=1;
  while(1)
  {
@@ -25,8 +25,7 @@ void wait(int d)
  {}
 }
 
-void service(void) __interrupt(0)
+void service(void) __interrupt(2)
 {
- IE0=0;
  LED2=!LED2;
 }
